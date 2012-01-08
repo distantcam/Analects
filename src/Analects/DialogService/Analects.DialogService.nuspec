@@ -9,6 +9,13 @@
     <dependencies>
       <dependency id="Ookii.Dialogs" version="1.0" />
     </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System" targetFramework="net35" />
+      <frameworkAssembly assemblyName="PresentationCore" targetFramework="net35" />
+      <frameworkAssembly assemblyName="PresentationFramework" targetFramework="net35" />
+      <frameworkAssembly assemblyName="System.Xaml" targetFramework="net35" />
+      <frameworkAssembly assemblyName="WindowsBase" targetFramework="net35" />
+    </frameworkAssemblies>
     <id>Analects.DialogService</id>
     <title />
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

@@ -6,6 +6,13 @@
     <owners>Cameron MacFarland</owners>
     <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
     <projectUrl>https://github.com/distantcam/Analects/tree/master/src/Analects/XAMLConverters</projectUrl>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System" targetFramework="net35" />
+      <frameworkAssembly assemblyName="PresentationCore" targetFramework="net35" />
+      <frameworkAssembly assemblyName="PresentationFramework" targetFramework="net35" />
+      <frameworkAssembly assemblyName="System.Xaml" targetFramework="net35" />
+      <frameworkAssembly assemblyName="WindowsBase" targetFramework="net35" />
+    </frameworkAssemblies>
     <id>Analects.XAMLConverters</id>
     <title />
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

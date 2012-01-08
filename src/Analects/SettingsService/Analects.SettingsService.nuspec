@@ -6,7 +6,7 @@
     <owners>Cameron MacFarland</owners>
     <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
     <projectUrl>https://github.com/distantcam/Analects/tree/master/src/Analects/SettingService</projectUrl>
-    <id>Analects.SettingService</id>
+    <id>Analects.SettingsService</id>
     <title />
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A simple settings service to persist user settings.</description>
