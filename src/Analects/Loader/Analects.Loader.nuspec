@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <version>1.0</version>
+    <authors>Cameron MacFarland</authors>
+    <owners>Cameron MacFarland</owners>
+    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <projectUrl>https://github.com/distantcam/Analects/tree/master/src/Analects/Loader</projectUrl>
+    <id>Analects.Loader</id>
+    <title />
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>An embedded loader system for .NET applications.</description>
+  </metadata>
+  <files>
+    <file src="EmbedAssemblies.targets" target="content\Analects\Loader\EmbedAssemblies.targets" />
+    <file src="Loader.cs" target="content\Analects\Loader\Loader.cs" />
+  </files>
+</package>

@@ -14,7 +14,7 @@ namespace Analects.Loader
         private static readonly Dictionary<string, Assembly> libraries = new Dictionary<string, Assembly>();
         private static readonly Dictionary<string, Assembly> reflectionOnlyLibraries = new Dictionary<string, Assembly>();
 
-        public static void Start()
+        public static void Initialize()
         {
             AppDomain.CurrentDomain.AssemblyResolve += FindAssembly;
 
@@ -75,7 +75,7 @@ namespace Analects.Loader
             }
         }
 
-        internal static Assembly LoadAssembly(string fullName)
+        private static Assembly LoadAssembly(string fullName)
         {
             Assembly a;
 
@@ -149,7 +149,7 @@ namespace Analects.Loader
             }
         }
 
-        internal static Assembly ReflectionOnlyLoadAssembly(string fullName)
+        private static Assembly ReflectionOnlyLoadAssembly(string fullName)
         {
             var executingAssembly = Assembly.GetExecutingAssembly();
 
@@ -178,12 +178,12 @@ namespace Analects.Loader
             }
         }
 
-        internal static Assembly FindAssembly(object sender, ResolveEventArgs args)
+        private static Assembly FindAssembly(object sender, ResolveEventArgs args)
         {
             return LoadAssembly(args.Name);
         }
 
-        internal static Assembly FindReflectionOnlyAssembly(object sender, ResolveEventArgs args)
+        private static Assembly FindReflectionOnlyAssembly(object sender, ResolveEventArgs args)
         {
             return ReflectionOnlyLoadAssembly(args.Name);
         }

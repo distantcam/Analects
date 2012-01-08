@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <version>1.0</version>
+    <authors>Cameron MacFarland</authors>
+    <owners>Cameron MacFarland</owners>
+    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <projectUrl>https://github.com/distantcam/Analects/tree/master/src/Analects/DialogService</projectUrl>
+    <dependencies>
+      <dependency id="Ookii.Dialogs" version="1.0" />
+    </dependencies>
+    <id>Analects.DialogService</id>
+    <title />
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A standard dialog abstraction for use in a presentation pattern.</description>
+  </metadata>
+  <files>
+    <file src="DialogService.cs" target="content\Analects\DialogService\DialogService.cs" />
+    <file src="DialogServiceImplementation.cs" target="content\Analects\DialogService\DialogServiceImplementation.cs" />
+    <file src="IDialogService.cs" target="content\Analects\DialogService\IDialogService.cs" />
+  </files>
+</package>

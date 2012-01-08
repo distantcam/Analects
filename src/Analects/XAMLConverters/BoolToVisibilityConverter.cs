@@ -4,7 +4,7 @@ using System.Windows;
 
 namespace Analects.XAMLConverters
 {
-    public class BoolToVisibilityConvert : MarkupConverter
+    public class BoolToVisibilityConverter : MarkupConverter
     {
         public bool Invert { get; set; }
 

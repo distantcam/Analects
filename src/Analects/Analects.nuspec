@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <version>1.0.0</version>
+    <authors>Cameron MacFarland</authors>
+    <owners>Cameron MacFarland</owners>
+    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <projectUrl>https://github.com/distantcam/Analects</projectUrl>
+    <dependencies>
+      <dependency id="Analects.DialogService" version="1.0" />
+      <dependency id="Analects.Loader" version="1.0" />
+      <dependency id="Analects.SettingsService" version="1.0" />
+      <dependency id="Analects.XAMLConverters" version="1.0" />
+    </dependencies>
+    <id>Analects</id>
+    <title />
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A selection of small useful code files.</description>
+  </metadata>
+  <files />
+</package>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <version>1.0</version>
+    <authors>Cameron MacFarland</authors>
+    <owners>Cameron MacFarland</owners>
+    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <projectUrl>https://github.com/distantcam/Analects/tree/master/src/Analects/SettingService</projectUrl>
+    <id>Analects.SettingService</id>
+    <title />
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A simple settings service to persist user settings.</description>
+  </metadata>
+  <files>
+    <file src="ISettingsService.cs" target="content\Analects\SettingService\ISettingsService.cs" />
+    <file src="SettingsService.cs" target="content\Analects\SettingService\SettingsService.cs" />
+  </files>
+</package>
