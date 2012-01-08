@@ -13,6 +13,7 @@
   </metadata>
   <files>
     <file src="EmbedAssemblies.targets" target="content\Analects\Loader\EmbedAssemblies.targets" />
+    <file src="Instructions.txt" target="content\Analects\Loader\Instructions.txt" />
     <file src="Loader.cs" target="content\Analects\Loader\Loader.cs" />
   </files>
 </package>
