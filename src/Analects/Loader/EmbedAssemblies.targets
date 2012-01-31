@@ -25,7 +25,7 @@
 
     <Copy
         SourceFiles="@(ReferenceCopyLocalPaths)"
-        DestinationFiles="@(ReferenceCopyLocalPaths->'$(MSBuildProjectDirectory)$(ReferencesPath)%(DestinationSubDirectory)%(Filename)%(Extension)')"
+        DestinationFiles="@(ReferenceCopyLocalPaths->'$(MSBuildProjectDirectory)\$(ReferencesPath)%(DestinationSubDirectory)%(Filename)%(Extension)')"
         SkipUnchangedFiles="$(SkipCopyUnchangedFiles)"
         OverwriteReadOnlyFiles="$(OverwriteReadOnlyFiles)"
         Retries="$(CopyRetryCount)"
