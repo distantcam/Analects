@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <version>1.0</version>
+    <version>1.1</version>
     <authors>Cameron MacFarland</authors>
     <owners>Cameron MacFarland</owners>
     <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
@@ -17,10 +17,14 @@
     <title />
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A set of useful XAML converters.</description>
+  <tags>XAML WPF Silverlight binding converters value-converters</tags>
   </metadata>
   <files>
     <file src="BoolToVisibilityConverter.cs" target="content\Analects\XAMLConverters\BoolToVisibilityConverter.cs" />
     <file src="DebugConverter.cs" target="content\Analects\XAMLConverters\DebugConverter.cs" />
     <file src="MarkupConverter.cs" target="content\Analects\XAMLConverters\MarkupConverter.cs" />
+    <file src="NullToVisibilityConverter.cs" target="content\Analects\XAMLConverters\NullToVisibilityConverter.cs" />
+    <file src="ToLowerConverter.cs" target="content\Analects\XAMLConverters\ToLowerConverter.cs" />
+    <file src="ToUpperConverter.cs" target="content\Analects\XAMLConverters\ToUpperConverter.cs" />
   </files>
 </package>

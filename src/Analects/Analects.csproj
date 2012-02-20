@@ -57,8 +57,11 @@
     <Compile Include="SettingsService\ISettingsService.cs" />
     <Compile Include="SettingsService\SettingsService.cs" />
     <Compile Include="XAMLConverters\BoolToVisibilityConverter.cs" />
+    <Compile Include="XAMLConverters\ToLowerConverter.cs" />
+    <Compile Include="XAMLConverters\ToUpperConverter.cs" />
     <Compile Include="XAMLConverters\DebugConverter.cs" />
     <Compile Include="XAMLConverters\MarkupConverter.cs" />
+    <Compile Include="XAMLConverters\NullToVisibilityConverter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Analects.nuspec" />
