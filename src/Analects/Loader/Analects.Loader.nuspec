@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <version>1.0.2</version>
+    <version>1.1</version>
     <authors>Cameron MacFarland</authors>
     <owners>Cameron MacFarland</owners>
     <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
@@ -12,6 +12,7 @@
     <description>An embedded loader system for .NET applications.</description>
   </metadata>
   <files>
+    <file src="..\..\Analects.Loader.BuildTasks\bin\Release\Analects.Loader.BuildTasks.dll" target="content\Analects\Loader\Analects.Loader.BuildTasks.dll" />
     <file src="EmbedAssemblies.targets" target="content\Analects\Loader\EmbedAssemblies.targets" />
     <file src="Instructions.txt" target="content\Analects\Loader\Instructions.txt" />
     <file src="Loader.cs" target="content\Analects\Loader\Loader.cs" />

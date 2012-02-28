@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.IO.Compression;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.InteropServices;
@@ -48,13 +49,14 @@ namespace Analects.Loader
                 if (!File.Exists(dllPath))
                 {
                     using (Stream stm = Assembly.GetExecutingAssembly().GetManifestResourceStream(lib))
+                    using (var decompress = new DeflateStream(stm, CompressionMode.Decompress))
                     {
                         // Copy the assembly to the temporary file
                         try
                         {
                             using (Stream outFile = File.Create(dllPath))
                             {
-                                stm.CopyTo(outFile);
+                                decompress.CopyTo(outFile);
                             }
                         }
                         catch
@@ -124,9 +126,10 @@ namespace Analects.Loader
                 return a;
             }
 
-            using (var s = executingAssembly.GetManifestResourceStream(actualName))
+            using (var stm = executingAssembly.GetManifestResourceStream(actualName))
+            using (var decompress = new DeflateStream(stm, CompressionMode.Decompress))
             {
-                var data = new BinaryReader(s).ReadBytes((int)s.Length);
+                var data = ReadFully(decompress);
 
                 byte[] debugData = null;
                 if (executingAssembly.GetManifestResourceNames().Contains(String.Format("{0}.{2}.{1}.pdb", assemblyName.Name, shortName, LibsFolder)))
@@ -167,9 +170,10 @@ namespace Analects.Loader
                 return null;
             }
 
-            using (var s = executingAssembly.GetManifestResourceStream(resourceName))
+            using (var stm = executingAssembly.GetManifestResourceStream(resourceName))
+            using (var decompress = new DeflateStream(stm, CompressionMode.Decompress))
             {
-                var data = new BinaryReader(s).ReadBytes((int)s.Length);
+                var data = ReadFully(decompress);
 
                 var a = Assembly.ReflectionOnlyLoad(data);
                 reflectionOnlyLibraries[shortName] = a;
@@ -186,6 +190,20 @@ namespace Analects.Loader
         private static Assembly FindReflectionOnlyAssembly(object sender, ResolveEventArgs args)
         {
             return ReflectionOnlyLoadAssembly(args.Name);
+        }
+
+        private static byte[] ReadFully(Stream input)
+        {
+            byte[] buffer = new byte[16 * 1024];
+            using (MemoryStream ms = new MemoryStream())
+            {
+                int read;
+                while ((read = input.Read(buffer, 0, buffer.Length)) > 0)
+                {
+                    ms.Write(buffer, 0, read);
+                }
+                return ms.ToArray();
+            }
         }
     }
 }
